@@ -14,7 +14,8 @@ st.set_page_config(page_title="Customer Churn Dashboard", page_icon="📉", layo
 
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"D:\TakeHomeTest\DA\customer_churn_dashboard.csv") 
+    url = "https://raw.githubusercontent.com/fuadhasyim6900/telco-churn-dashboard/main/customer_churn_dashboard.csv"
+    return pd.read_csv(url)
 
 df = load_data()
 
@@ -494,5 +495,6 @@ elif menu == "📌 Segmentation & Cohort Analysis":
     st.plotly_chart(fig_cluster, use_container_width=True)
 
     st.markdown("---")
+
 
 
